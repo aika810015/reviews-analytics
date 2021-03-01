@@ -6,7 +6,9 @@ with open("reviews.txt", "r") as f:
 		count += 1
 		if count % 1000 == 0:
 			print(len(data))
-print(len(data))
-print(data[0])
-print("----------------------")
-print(data[1])
+print("loading完了,トータル", len(data), "コメントあります。")
+
+sum_len = 0
+for d in data:
+	sum_len += len(d)
+print("平均コメントの長さは", sum_len/len(data))
